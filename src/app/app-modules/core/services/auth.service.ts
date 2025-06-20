@@ -30,14 +30,18 @@ export class AuthService {
   transactionId: any;
   constructor(private http: HttpClient) {}
 
-  login(userName: any, password: string, doLogout: any) {
-    console.log('environment.loginUrl', environment.loginUrl);
-    return this.http.post(environment.loginUrl, {
+  login(userName: any, password: string, doLogout: any, captchaToken?: string) {
+    const requestBody: any = {
       userName: userName,
       password: password,
       doLogout: doLogout,
       withCredentials: true,
-    });
+    };
+
+    if (captchaToken) {
+      requestBody.captchaToken = captchaToken;
+    }
+    return this.http.post(environment.loginUrl, requestBody);
   }
   userlogoutPreviousSession(userName: any) {
     console.log(

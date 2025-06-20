@@ -33,6 +33,7 @@ import { AudioRecordingService } from './app-modules/nurse-doctor/shared/service
 import { SharedModule } from './app-modules/core/components/shared/shared.module';
 import { RegistrarService } from 'Common-UI/src/registrar/services/registrar.service';
 import { RegistrationModule } from 'Common-UI/src/registrar/registration.module';
+import { CaptchaComponent } from './app-modules/captcha/captcha.component';
 
 @NgModule({
   declarations: [
@@ -44,6 +45,7 @@ import { RegistrationModule } from 'Common-UI/src/registrar/registration.module'
     SetPasswordComponent,
     TmLogoutComponent,
     ResetPasswordComponent,
+    CaptchaComponent,
   ],
   imports: [
     BrowserModule,

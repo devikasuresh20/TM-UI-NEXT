@@ -4,8 +4,8 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.iemr.tm-ui</groupId>
-  <artifactId>TM-UI</artifactId>
-  <version>1.0</version>
+  <artifactId>tm-ui</artifactId>
+  <version>3.0.0</version>
   <name>TM-UI</name>
   <description>Piramal - tm: Module ui</description>
   <packaging>war</packaging>
@@ -56,7 +56,7 @@
   <!-- we could create individual properties similar to variables -->
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <final-name>tm-ui-v3.0.0</final-name>
+    <final-name>${artifactId}-${version}</final-name>
     <build.timestamp>${maven.build.timestamp}</build.timestamp>
     <maven.build.timestamp.format>yyyy-MM-dd HH:mm</maven.build.timestamp.format>
     <hostname-dev>10.208.122.32</hostname-dev>
@@ -74,7 +74,7 @@
 
   <!-- install the necessary node_modules & compile in prod mode -->
   <build>
-    <finalName>tm-ui-v3.0.0</finalName>
+    <finalName>${artifactId}-${version}</finalName>
     <plugins>
       <plugin>
         <artifactId>maven-clean-plugin</artifactId>

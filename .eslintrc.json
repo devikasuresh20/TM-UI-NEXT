@@ -35,6 +35,7 @@
         "@typescript-eslint/no-explicit-any": 0,
         "@typescript-eslint/no-empty-function": 0,
         "@typescript-eslint/no-unused-vars": 0,
+        "@angular-eslint/template/click-events-have-key-events": 0,
         "eqeqeq": 1
       }
     },
@@ -54,6 +55,22 @@
             "parser": "angular"
           }
         ]
+      }
+    },
+    {
+      "files": ["*.js", "*.jsx"],
+      "env": {
+         "node": true
+      },
+      "extends": ["eslint:recommended"],
+      "parserOptions": {
+        "ecmaVersion": 2020,
+        "sourceType": "module"
+      },
+      "rules": {
+        "no-unused-vars": "warn",
+        "no-console": "error",
+        "eqeqeq": ["error", "always"]
       }
     }
   ]

@@ -492,6 +492,8 @@ export const environment = {
   getAbdmMappedFacility: `${COMMON_API}facility/getWorklocationMappedAbdmFacility/`,
   saveAbdmFacilityIdForVisit: `${FHIR_API}facility/saveAbdmFacilityId`,
 
+  getBenIdForhealthID: `${FHIR_API}healthID/getBenIdForhealthID`,
+
   /* Abha V3 APIs */
   requestOtpForAbhaEnroll: `${FHIR_API}abhaCreation/requestOtpForAbhaEnrollment`,
   abhaEnrollmentByAadhaar: `${FHIR_API}abhaCreation/abhaEnrollmentByAadhaar`,
